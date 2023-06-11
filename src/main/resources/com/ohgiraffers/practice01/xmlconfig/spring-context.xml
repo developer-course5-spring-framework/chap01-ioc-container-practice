@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="board" class="com.ohgiraffers.common.BoardDTO">
+
+        <!-- Long 타입의 첫 번째 파라미터(아이디; id)에 1값을 전달 -->
+        <constructor-arg index="0" value="01"/>
+        <!-- String 타입의 두 번째 파라미터(제목; title)에 "첫 번째 글" 값을 전달 -->
+        <constructor-arg name="title" value="스프링 수업 어떠세요?"/>
+        <!-- String 타입의 세 번째 파라미터(내용; content)에 글의 내용 값을 전달 -->
+        <constructor-arg name="content"><value>저는 새롭고 재밌네요</value></constructor-arg>
+        <!-- String 타입의 네 번째 파라미터(작성자; writer)에 "홍길동" 값을 전달 -->
+        <constructor-arg name="writer"><value>고지혜</value></constructor-arg>
+    </bean>
+</beans>
